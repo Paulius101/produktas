@@ -14,13 +14,65 @@
   gap: 20px;
 }
 
+.produktas.nuolaida {
+  background-color: orangered;
+}
+
 .produktas img {
   max-width: 600px;
   height: auto;
 }
 
-.produktas .kaina.nuolaida {
-  background-color: orange;
+.produktas .akcija {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: orange;
+  -webkit-animation: animation 2s ease-in-out infinite;
+          animation: animation 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes animation {
+  0% {
+    display: none;
+  }
+  30% {
+    font-size: 18px;
+  }
+  60% {
+    font-size: 36;
+  }
+  90% {
+    font-size: 18px;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes animation {
+  0% {
+    display: none;
+  }
+  30% {
+    font-size: 18px;
+  }
+  60% {
+    font-size: 36;
+  }
+  90% {
+    font-size: 18px;
+  }
+  100% {
+    display: none;
+  }
 }
 
 .produktas button {

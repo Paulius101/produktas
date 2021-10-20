@@ -6,16 +6,47 @@
   align-items: center;
   gap: 20px;
 
+  &.nuolaida {
+    background-color: orangered;
+  }
+
   img {
     max-width: 600px;
     height: auto;
   }
 
-  .kaina {
-    &.nuolaida {
-      background-color: orange;
+
+
+  .akcija {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: orange;
+    animation: animation 2s ease-in-out infinite;
+  }
+
+  @keyframes animation {
+    0% {
+      display: none;
+    }
+
+    30% {
+      font-size: 18px;
+    }
+
+    60% {
+      font-size: 36;
+    }
+
+    90% {
+      font-size: 18px;
+    }
+
+    100% {
+      display: none;
     }
   }
+
 
   button {
     padding: 5px 15px;

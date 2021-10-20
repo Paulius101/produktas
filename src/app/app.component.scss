@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 800px;
-  margin: 50px calc(50% - 400px);
+  margin: 10px calc(50% - 400px);
   align-items: center;
+  gap: 20px;
 
   img {
     max-width: 600px;
@@ -13,6 +14,14 @@
   .kaina {
     &.nuolaida {
       background-color: orange;
+    }
+  }
+
+  button {
+    padding: 5px 15px;
+
+    &.neaktyvus {
+      background-color: red;
     }
   }
 }

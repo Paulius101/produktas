@@ -1,27 +1,6 @@
-# Produktas
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#Angular komponentai (parduotuvė)
+1. Sukurkite naują (Angular) projektą elektroninės komercijos produktui.
+2. Sukurkite komponentą, kuris atvaizduoja produktą.
+3. Produktas turi atvaizduoti pavadinimą, kainą ir paveikslėlį. paveikslėlį pasirinkite savo nuožiūra.
+4. Paryškinkite elementa fono spalva, jei produktas šiuo metu yra su nuolaida. Informacija apie nuolaida turėtų būti saugoma produkto modelyje.
+5. Pridėkite mygtukus, kurie leidžia padidinti arba pamažinti produkto kiekį krepšelyje. Kiekis krepšelyje turėtų būti matomas. Jei produkto kiekis krepšelyje lygus nuliui - padarykite išėmimo mygtuką neaktyviu.

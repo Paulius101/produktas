@@ -13,7 +13,9 @@
   <img src="{{this.kabelis.image}}" alt="#">
 
   <button (click)="this.kabelis.padidintiKieki()">Prideti</button>
-  <button (click)="this.kabelis.sumazintiKieki()">Isimti</button>
+  <button *ngIf="this.kabelis.kiekis>0" (click)="this.kabelis.sumazintiKieki()">Isimti</button>
+
+  <button [class.neaktyvus]="true" *ngIf="this.kabelis.kiekis===0">Isimti</button>
 
   <div class="krepselis">
     {{this.kabelis.kiekis}}

@@ -1,0 +1,18 @@
+.produktas {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 50px calc(50% - 400px);
+  align-items: center;
+
+  img {
+    max-width: 600px;
+    height: auto;
+  }
+
+  .kaina {
+    &.nuolaida {
+      background-color: orange;
+    }
+  }
+}

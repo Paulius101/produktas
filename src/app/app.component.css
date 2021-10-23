@@ -1,4 +1,13 @@
-.produktas {
+.product-list {
+  display: -ms-grid;
+  display: grid;
+  width: 1000px;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.product-list .produktas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,24 +15,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 800px;
-  margin: 10px calc(50% - 400px);
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
 }
 
-.produktas.nuolaida {
+.product-list .produktas.nuolaida {
   background-color: orangered;
 }
 
-.produktas img {
-  max-width: 600px;
+.product-list .produktas img {
+  max-width: 250px;
   height: auto;
 }
 
-.produktas .akcija {
+.product-list .produktas .akcija {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +83,7 @@
   }
 }
 
-.produktas .actions {
+.product-list .produktas .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,10 +96,10 @@
           justify-content: space-between;
 }
 
-.produktas .actions button {
+.product-list .produktas .actions button {
   padding: 5px 15px;
 }
 
-.produktas .actions button.neaktyvus {
+.product-list .produktas .actions button.neaktyvus {
   background-color: red;
 }

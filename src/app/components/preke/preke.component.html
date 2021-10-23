@@ -1,41 +1,32 @@
-<!-- <div>
-    <ul>
-        <li>Vardas: {{prezidentas?.vardas}}</li>
-        <li>Reitingas: {{prezidentas?.reitingas}}</li>
-    </ul>
+<div class="product-list">
+    <div class="produktas">
+        <h1>{{this.preke?.pavadinimas}}</h1>
 
-    <button (click)="prezidentas?.pridetiReitingo()">Pridėti reitingo</button>
-    <button (click)="prezidentas?.atimtiReitingo()">Atimti reitingo</button>
-    <button (click)="onFavoriteSelected.emit()">Pažymėti kaip mėgstamiausia</button>
-</div> -->
-
-<div class="produktas" [class.nuolaida]="this.preke?.kiekis  >=5">
-    <h1>{{this.preke?.pavadinimas}}</h1>
-
-    <div class="kaina" *ngIf="this.preke!.kiekis <5">
-        <h1> Kaina {{this.preke?.kaina}} EUR</h1>
-    </div>
-
-    <ng-container *ngIf="this.preke.kiekis >=5">
-        <div class="akcija" *ngFor="let akcija of this.preke?.akcijos">
-            {{akcija}}
+        <div class="kaina" *ngIf="this.preke!.kiekis <5">
+            <h1> Kaina {{this.preke?.kaina}} EUR</h1>
         </div>
-    </ng-container>
 
-    <div [ngClass]="{'kaina':true, 'nuolaida':true}" *ngIf="this.preke!.kiekis >=5">
-        <h1> Kaina {{this.preke?.suteiktiNuolaida()}} EUR</h1>
+        <ng-container *ngIf="this.preke!.kiekis >=5">
+            <div class="akcija" *ngFor="let akcija of this.preke?.akcijos">
+                {{akcija}}
+            </div>
+        </ng-container>
+
+        <div [ngClass]="{'kaina':true, 'nuolaida':true}" *ngIf="this.preke!.kiekis >=5">
+            <h1> Kaina {{this.preke?.suteiktiNuolaida()}} EUR</h1>
+        </div>
+
+        <img src="{{this.preke?.image}}" alt="#">
+
+        <button (click)="this.preke?.padidintiKieki()">Prideti</button>
+        <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
+
+        <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Isimti</button>
+
+
+        <div class="krepselis">
+            {{this.preke?.kiekis}}
+        </div>
+
     </div>
-
-    <img src="{{this.preke?.image}}" alt="#">
-
-    <button (click)="this.preke?.padidintiKieki()">Prideti</button>
-    <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
-
-    <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Isimti</button>
-
-
-    <div class="krepselis">
-        {{this.preke?.kiekis}}
-    </div>
-
 </div>

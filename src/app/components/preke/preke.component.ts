@@ -1,8 +1,14 @@
-import {  Component, EventEmitter,
+import {
+  Component,
+  EventEmitter,
   Input,
-  OnInit, Output } from '@angular/core';
+  OnInit,
+  Output
+} from '@angular/core';
 
-  import {Produktas} from "../../models/produktas";
+import {
+  Produktas
+} from "../../models/produktas";
 
 @Component({
   selector: 'app-preke',
@@ -11,19 +17,16 @@ import {  Component, EventEmitter,
 })
 export class PrekeComponent implements OnInit {
 
-  // https://angular.io/api/core/Input
   @Input()
-  public preke?: Produktas;
+  public preke? : Produktas;
 
-  // https://angular.io/guide/inputs-outputs
   @Output()
-  public onAddToCart: EventEmitter<void>;
+  public onAddToCart: EventEmitter < void > ;
 
   constructor() {
-    this.onAddToCart = new EventEmitter<void>();
+    this.onAddToCart = new EventEmitter < void > ();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

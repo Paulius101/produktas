@@ -17,13 +17,15 @@ import {
 import {
   PrekesComponent
 } from './components/prekes/prekes.component';
+import { KrepselisComponent } from './components/krepselis/krepselis.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PrekeComponent,
-    PrekesComponent
+    PrekesComponent,
+    KrepselisComponent
   ],
   imports: [
     BrowserModule,

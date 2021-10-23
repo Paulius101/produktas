@@ -47,7 +47,7 @@
     font-size: 18px;
   }
   60% {
-    font-size: 36;
+    font-size: 36px;
   }
   90% {
     font-size: 18px;
@@ -65,7 +65,7 @@
     font-size: 18px;
   }
   60% {
-    font-size: 36;
+    font-size: 36px;
   }
   90% {
     font-size: 18px;
@@ -75,10 +75,23 @@
   }
 }
 
-.produktas button {
+.produktas .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.produktas .actions button {
   padding: 5px 15px;
 }
 
-.produktas button.neaktyvus {
+.produktas .actions button.neaktyvus {
   background-color: red;
 }

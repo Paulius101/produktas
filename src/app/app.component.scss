@@ -35,7 +35,7 @@
     }
 
     60% {
-      font-size: 36;
+      font-size: 36px;
     }
 
     90% {
@@ -47,12 +47,17 @@
     }
   }
 
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-  button {
-    padding: 5px 15px;
+    button {
+      padding: 5px 15px;
 
-    &.neaktyvus {
-      background-color: red;
+      &.neaktyvus {
+        background-color: red;
+      }
     }
   }
 }

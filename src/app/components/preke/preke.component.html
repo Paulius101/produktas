@@ -1,0 +1,41 @@
+<div>
+    <ul>
+        <li>Vardas: {{prezidentas?.vardas}}</li>
+        <li>Reitingas: {{prezidentas?.reitingas}}</li>
+    </ul>
+
+    <button (click)="prezidentas?.pridetiReitingo()">Pridėti reitingo</button>
+    <button (click)="prezidentas?.atimtiReitingo()">Atimti reitingo</button>
+    <button (click)="onFavoriteSelected.emit()">Pažymėti kaip mėgstamiausia</button>
+</div>
+
+<div class="produktas" [class.nuolaida]="this.kabelis.kiekis >=5">
+    <h1>{{this.kabelis.pavadinimas}}</h1>
+
+    <div class="kaina" *ngIf="this.kabelis.kiekis <5">
+        <h1> Kaina {{this.kabelis.kaina}} EUR</h1>
+    </div>
+
+    <ng-container *ngIf="this.kabelis.kiekis >=5">
+        <div class="akcija" *ngFor="let akcija of this.kabelis.akcijos">
+            {{akcija}}
+        </div>
+    </ng-container>
+
+    <div [ngClass]="{'kaina':true, 'nuolaida':true}" *ngIf="this.kabelis.kiekis >=5">
+        <h1> Kaina {{this.kabelis.suteiktiNuolaida()}} EUR</h1>
+    </div>
+
+    <img src="{{this.kabelis.image}}" alt="#">
+
+    <button (click)="this.kabelis.padidintiKieki()">Prideti</button>
+    <button *ngIf="this.kabelis.kiekis>0" (click)="this.kabelis.sumazintiKieki()">Isimti</button>
+
+    <button [class.neaktyvus]="true" *ngIf="this.kabelis.kiekis===0">Isimti</button>
+
+
+    <div class="krepselis">
+        {{this.kabelis.kiekis}}
+    </div>
+
+</div>

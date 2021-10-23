@@ -1,13 +1,4 @@
-.product-list {
-  display: -ms-grid;
-  display: grid;
-  width: 1000px;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-}
-
-.product-list .produktas {
+.produktas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,16 +13,16 @@
   gap: 20px;
 }
 
-.product-list .produktas.nuolaida {
+.produktas.nuolaida {
   background-color: orangered;
 }
 
-.product-list .produktas img {
-  max-width: 250px;
+.produktas img {
+  max-width: 200px;
   height: auto;
 }
 
-.product-list .produktas .akcija {
+.produktas .akcija {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +74,7 @@
   }
 }
 
-.product-list .produktas .actions {
+.produktas .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,10 +87,10 @@
           justify-content: space-between;
 }
 
-.product-list .produktas .actions button {
+.produktas .actions button {
   padding: 5px 15px;
 }
 
-.product-list .produktas .actions button.neaktyvus {
+.produktas .actions button.neaktyvus {
   background-color: red;
 }

@@ -1,1 +1,1 @@
-/* No CSS */
+body{background-color:#d1d4dc;display:-ms-grid;display:grid;width:800px;-ms-grid-columns:(minmax(240px, 2fr))[auto-fit];grid-template-columns:repeat(auto-fit, minmax(240px, 2fr));gap:30px}

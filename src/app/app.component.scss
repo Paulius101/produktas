@@ -1,68 +1,61 @@
-.product-list {
-  display: grid;
-  width: 1000px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+.produktas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
 
-  .produktas {
+  &.nuolaida {
+    background-color: orangered;
+  }
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+
+
+
+  .akcija {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    color: orange;
+    animation: animation 2s ease-in-out infinite;
+  }
 
-    &.nuolaida {
-      background-color: orangered;
+  @keyframes animation {
+    0% {
+      display: none;
     }
 
-    img {
-      max-width: 250px;
-      height: auto;
+    30% {
+      font-size: 18px;
     }
 
-
-
-    .akcija {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: orange;
-      animation: animation 2s ease-in-out infinite;
+    60% {
+      font-size: 36px;
     }
 
-    @keyframes animation {
-      0% {
-        display: none;
-      }
-
-      30% {
-        font-size: 18px;
-      }
-
-      60% {
-        font-size: 36px;
-      }
-
-      90% {
-        font-size: 18px;
-      }
-
-      100% {
-        display: none;
-      }
+    90% {
+      font-size: 18px;
     }
 
-    .actions {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    100% {
+      display: none;
+    }
+  }
 
-      button {
-        padding: 5px 15px;
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-        &.neaktyvus {
-          background-color: red;
-        }
+    button {
+      padding: 5px 15px;
+
+      &.neaktyvus {
+        background-color: red;
       }
     }
   }

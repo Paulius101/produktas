@@ -4,7 +4,7 @@ export class Produktas {
   public image: String
   public kiekis: number;
   public nuolaida: number;
-  public akcijos: string[] = ["AKCIJA!!!", "AKCIJA!!!", "AKCIJA!!!"];
+  public akcijos: string[] = ["AKCIJA!!!"];
   public id: number;
 
   public constructor(id: number, pavadinimas: string, image: string, kiekis: number, kaina: number, nuolaida: number) {

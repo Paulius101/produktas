@@ -16,15 +16,14 @@
     </div>
 
     <img src="{{this.preke?.image}}" alt="#">
+    <div class="actions">
+        <button (click)="this.preke?.padidintiKieki()">Prideti</button>
+        <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
 
-    <button (click)="this.preke?.padidintiKieki()">Prideti</button>
-    <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
+        <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Isimti</button>
 
-    <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Isimti</button>
-
-
+    </div>
     <div class="likutis">
         {{this.preke?.kiekis}}
     </div>
-
 </div>

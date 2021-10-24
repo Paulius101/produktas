@@ -1,3 +1,68 @@
-body {
-  background-color: red;
+.produktas {
+  text-align: center;
+  border: 2px solid olivedrab;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  align-items: center;
+  contain: content;
+  gap: 20px;
+
+  &.nuolaida {
+    background-color: orangered;
+  }
+
+  img {
+    width: 150px;
+    height: 120px;
+  }
+
+
+
+  .akcija {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    contain: content;
+    color: orange;
+    animation: animation 2s ease-in-out infinite;
+  }
+
+  @keyframes animation {
+    0% {
+      display: none;
+    }
+
+    30% {
+      font-size: 19px;
+    }
+
+    60% {
+      font-size: 18px;
+    }
+
+    90% {
+      font-size: 9 px;
+    }
+
+    100% {
+      display: none;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      padding: 5px 15px;
+
+      &.neaktyvus {
+        background-color: red;
+      }
+    }
+  }
 }

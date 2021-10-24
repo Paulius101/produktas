@@ -91,12 +91,29 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .produktas .actions button {
+  color: white;
   padding: 5px 15px;
+  border: 2px, solid;
+  border-radius: 13px;
+  background-color: black;
+  text-align: center;
 }
 
 .produktas .actions button.neaktyvus {
   background-color: red;
+}
+
+.produktas .actions button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }

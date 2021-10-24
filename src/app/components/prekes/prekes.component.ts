@@ -35,7 +35,7 @@ export class PrekesComponent implements OnInit {
   public constructor() {
     this.prekes = [];
     //this.addToCartList = [];
-    this.kiekisKrepselyje = 1;
+    this.kiekisKrepselyje = 0;
 
     this.id = 0;
     this.prekes.push(new Produktas(this.idGenerator(), "Super kabelis", "https://cdn.pocket-lint.com/r/s/970x/assets/images/141628-cameras-feature-ocd-cable-porn-image1-oyzsp4buna-jpg.webp?v1", 4, 100, 0.5));
@@ -47,20 +47,30 @@ export class PrekesComponent implements OnInit {
   }
 
   public addToCart(preke: Produktas): void {
- 
-    if(this.cart.length === 0) {
-    this.cart.push({id:preke.id, pavadinimas:preke.pavadinimas, kiekis:this.kiekisKrepselyje}) }
-    // else   {
-    //   for(const p of this.cart) {
-    //     if(p[0] === preke.pavadinimas) {
-    //   p.kiekisKrepselyje++
-    //     }
-    //   }
-    // this.pasirinktaPreke = preke.pavadinimas;
-    // }
-    console.log(this.cart[0]);
 
-  }
+    if (this.cart.length === 0) {
+      this.cart.push({
+        id: preke.id,
+        pavadinimas: preke.pavadinimas,
+        kiekis: this.kiekisKrepselyje
+      })
+    }
+      for (const p of this.cart) {
+        if (p.id !== preke.id) {
+          this.cart.push({
+            id: preke.id,
+            pavadinimas: preke.pavadinimas,
+            kiekis: this.kiekisKrepselyje
+          })
+        }
+        if (p.id === preke.id) {
+         p.kiekis++
+        }
+      }
+    
+ console.log(this.cart);
+ 
+}
   ngOnInit(): void {}
 
 }

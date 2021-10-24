@@ -1,0 +1,17 @@
+.cart-items {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: auto;
+  contain: content;
+  align-items: center;
+  z-index: 1;
+
+  .productInTheCart {
+    max-width: 200px;
+    height: auto;
+  }
+}

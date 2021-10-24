@@ -1,1 +1,2 @@
-<div class="productInTheCart" *ngFor="let product of pasirinktaPreke">{{this.product[0]}}</div>
+<div class="productInTheCartName" *ngFor="let product of this.cart">Pavadinimas: {{product.pavadinimas}} </div>
+<div class="productInTheCartQuantity" *ngFor="let product of this.cart">Pavadinimas: {{product.kiekis}} </div>

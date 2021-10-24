@@ -2,7 +2,7 @@
     <h1>{{this.preke?.pavadinimas}}</h1>
 
     <div class="kaina" *ngIf="this.preke!.kiekis <5">
-        <h1> Kaina {{this.preke?.kaina}} EUR</h1>
+        <h2> Kaina {{this.preke?.kaina}} EUR</h2>
     </div>
 
     <ng-container *ngIf="this.preke!.kiekis >=5">
@@ -12,7 +12,7 @@
     </ng-container>
 
     <div [ngClass]="{'kaina':true, 'nuolaida':true}" *ngIf="this.preke!.kiekis >=5">
-        <h1> Kaina {{this.preke?.suteiktiNuolaida()}} EUR</h1>
+        <h2> Kaina {{this.preke?.suteiktiNuolaida()}} EUR</h2>
     </div>
 
     <img src="{{this.preke?.image}}" alt="#">
@@ -20,7 +20,8 @@
         <button (click)="this.preke?.padidintiKieki()">Prideti</button>
         <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
 
-        <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Isimti</button>
+        <!-- <button (click)="" [disabled]="!">Atsaukti</button> -->
+        <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Prideti i krepseli</button>
 
     </div>
     <div class="likutis">

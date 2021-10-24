@@ -1,0 +1,32 @@
+header {
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  background-color: skyblue;
+  z-index: 2;
+}
+
+header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 100px;
+  color: white;
+  padding: 5px 15px;
+  border: 2px, solid;
+  border-radius: 3px;
+  background-color: black;
+  text-align: center;
+}
+
+header button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}

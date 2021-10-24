@@ -26,6 +26,7 @@ export class PrekesComponent implements OnInit {
   public pasirinktaPreke ? : string;
   public id: number;
 
+
   @Input()
   public cart: any[] = [];
 
@@ -54,27 +55,34 @@ export class PrekesComponent implements OnInit {
         pavadinimas: preke.pavadinimas,
         kiekis: this.kiekisKrepselyje
       })
-      return ;
+      return;
     }
-     let exist=false;
-      for (const p of this.cart) {
-       
-        if (p.id === preke.id) {
-          p.kiekis++;
-          exist=true;
-        }
+    let exist = false;
+    for (const p of this.cart) {
+
+      if (p.id === preke.id) {
+        p.kiekis++;
+        exist = true;
       }
-       if (!exist) {
-          this.cart.push({
-            id: preke.id,
-            pavadinimas: preke.pavadinimas,
-            kiekis: this.kiekisKrepselyje
-          })
-        }
-    
- console.log(this.cart);
- 
-}
+    }
+    if (!exist) {
+      this.cart.push({
+        id: preke.id,
+        pavadinimas: preke.pavadinimas,
+        kiekis: this.kiekisKrepselyje
+      })
+    }
+
+    console.log(this.cart);
+
+  }
+
+  // public removeFromCart():void {
+  //   for(const product of this.cart) {
+  // if(pro)
+  //   }
+  // }
+
   ngOnInit(): void {}
 
 }

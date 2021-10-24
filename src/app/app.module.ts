@@ -18,6 +18,7 @@ import {
   PrekesComponent
 } from './components/prekes/prekes.component';
 import { KrepselisComponent } from './components/krepselis/krepselis.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { KrepselisComponent } from './components/krepselis/krepselis.component';
     AppComponent,
     PrekeComponent,
     PrekesComponent,
-    KrepselisComponent
+    KrepselisComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

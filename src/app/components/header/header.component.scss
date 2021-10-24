@@ -1,0 +1,30 @@
+ header {
+   height: 50px;
+   position: fixed;
+   width: 100%;
+   background-color: skyblue;
+   z-index: 2;
+
+
+   button {
+     display: flex;
+     align-items: center;
+     height: 50px;
+     width: 100px;
+     color: white;
+     padding: 5px 15px;
+     border: 2px,
+       solid;
+     border-radius: 3px;
+     background-color: black;
+     text-align: center;
+   }
+
+   button:hover {
+     cursor: pointer;
+     background-color: white;
+     color: black;
+     transform: scale(1.05);
+   }
+
+ }

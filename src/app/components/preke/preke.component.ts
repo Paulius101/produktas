@@ -16,9 +16,9 @@ import {
   styleUrls: ['./preke.component.scss']
 })
 export class PrekeComponent implements OnInit {
-
   @Input()
-  public preke? : Produktas;
+  public preke ? : Produktas;
+public cart: any[] = [];
 
   @Output()
   public onAddToCart: EventEmitter < void > ;
@@ -26,7 +26,7 @@ export class PrekeComponent implements OnInit {
   constructor() {
     this.onAddToCart = new EventEmitter < void > ();
   }
-
+  
   ngOnInit(): void {}
 
 }

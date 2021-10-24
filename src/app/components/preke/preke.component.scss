@@ -1,7 +1,8 @@
 .produktas {
   text-align: center;
-  border: 2px solid olivedrab;
+  border: 2px solid red;
   border-radius: 13px;
+  border-style: inset;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -79,5 +80,12 @@
       color: black;
       transform: scale(1.05);
     }
+  }
+
+  .likutis {
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px red;
+    border-style: inset;
   }
 }

@@ -1,7 +1,13 @@
+.hidden {
+  display: none;
+}
+
 .cart-items {
+  overflow: scroll;
+  background-color: lightblue;
+  width: 220px;
+  height: 220px;
   position: absolute;
-  top: 5%;
-  left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,4 +27,5 @@
 .cart-items .productInTheCart {
   max-width: 200px;
   height: auto;
+  border: 1px solid orangered;
 }

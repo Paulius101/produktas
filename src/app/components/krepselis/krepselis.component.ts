@@ -27,6 +27,7 @@ import {
   styleUrls: ['./krepselis.component.scss']
 })
 export class KrepselisComponent implements OnInit {
+   public rodomosPrekes: boolean = false;
   @Input()
   public cart: any[] = [];
 
@@ -35,4 +36,7 @@ export class KrepselisComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  public pakeistiRodyma() {
+    this.rodomosPrekes = !this.rodomosPrekes
+  };
 }

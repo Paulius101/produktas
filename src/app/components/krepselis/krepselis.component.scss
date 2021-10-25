@@ -1,31 +1,63 @@
-.cart-items {
-  overflow: scroll;
-  background-color: lightblue;
-  width: 440px;
-  height: 440px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  contain: content;
-  align-items: center;
-  z-index: 1;
-  position: fixed;
-  opacity: 0;
-  animation: fill 1s steps(60, start) forwards;
+ header {
+   height: 50px;
+   position: fixed;
+   width: 100%;
+   background-color: skyblue;
+   z-index: 2;
 
-  @keyframes fill {
-    to {
-      opacity: 1;
-    }
-  }
 
-  .productInTheCart {
-    width: 400px;
-    height: auto;
-    border: 1px solid orangered;
-  }
-}
+   button {
+     display: flex;
+     align-items: center;
+     height: 50px;
+     width: 100px;
+     color: white;
+     padding: 5px 15px;
+     border: 2px,
+       solid;
+     border-radius: 3px;
+     background-color: black;
+     text-align: center;
+   }
+
+   button:hover {
+     cursor: pointer;
+     background-color: white;
+     color: black;
+     transform: scale(1.05);
+   }
+
+ }
+
+
+ .cart-items {
+   overflow: scroll;
+   background-color: lightblue;
+   width: 440px;
+   height: 440px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   contain: content;
+   align-items: center;
+   z-index: 1;
+   position: fixed;
+   opacity: 0;
+   animation: fill 1s steps(60, start) forwards;
+
+   @keyframes fill {
+     to {
+       opacity: 0.5;
+     }
+   }
+
+   .productInTheCart {
+     width: 400px;
+     height: auto;
+     border: 1px solid orangered;
+   }
+ }

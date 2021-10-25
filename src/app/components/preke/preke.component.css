@@ -22,6 +22,7 @@
   opacity: 0;
   -webkit-animation: fill 1s steps(60, start) forwards;
           animation: fill 1s steps(60, start) forwards;
+  background-color: skyblue;
 }
 
 @-webkit-keyframes fill {

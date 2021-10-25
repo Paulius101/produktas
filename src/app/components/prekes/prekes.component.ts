@@ -81,7 +81,7 @@ export class PrekesComponent implements OnInit {
   }
 
   public removeFromCart(itemId: number) {
-    const itemIndex = this.cart..indexOf(itemId);
+    const itemIndex = this.cart.indexOf(itemId);
     console.log(itemId);
     
 console.log(itemIndex);

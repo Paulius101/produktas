@@ -19,6 +19,7 @@
     <div class="actions">
         <button (click)="this.preke?.padidintiKieki()">Prideti</button>
         <button *ngIf="this.preke!.kiekis>0" (click)="this.preke?.sumazintiKieki()" (click)="onAddToCart.emit()">Prideti i krepseli</button>
+        <button (click)="onItemRemoved.emit()">Išimti iš krepšelio</button>
 
         <!-- <button (click)="" [disabled]="!">Atsaukti</button> -->
         <button [class.neaktyvus]="true" *ngIf="this.preke?.kiekis===0">Prideti i krepseli</button>

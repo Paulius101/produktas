@@ -80,11 +80,16 @@ export class PrekesComponent implements OnInit {
 
   }
 
-  // public removeFromCart():void {
-  //   for(const product of this.cart) {
-  // if(pro)
-  //   }
-  // }
+  public removeFromCart(itemId: number) {
+    const itemIndex = this.cart..indexOf(itemId);
+    console.log(itemId);
+    
+console.log(itemIndex);
+
+    if (itemIndex !== -1)
+      this.cart.splice(itemIndex, 1);
+  }
+
 
   ngOnInit(): void {}
 

@@ -1,4 +1,4 @@
 <div class="prekes">
-    <app-preke *ngFor="let p of prekes" [preke]="p" (onAddToCart)="addToCart(p)">
+    <app-preke *ngFor="let p of prekes" [preke]="p" (onAddToCart)="addToCart(p)" (onItemRemoved)="removeFromCart(p.id)">
     </app-preke>
 </div>

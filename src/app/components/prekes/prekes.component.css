@@ -10,3 +10,21 @@
       grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
+@media (max-width: 1200px) {
+  .prekes {
+    position: absolute;
+    top: 90%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .prekes {
+    position: absolute;
+    top: 140%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}

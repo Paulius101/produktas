@@ -53,7 +53,8 @@ export class PrekesComponent implements OnInit {
       this.cart.push({
         id: preke.id,
         pavadinimas: preke.pavadinimas,
-        kiekis: this.kiekisKrepselyje
+        kiekis: this.kiekisKrepselyje,
+        kaina: preke.kaina
       })
       return;
     }
@@ -62,6 +63,7 @@ export class PrekesComponent implements OnInit {
 
       if (p.id === preke.id) {
         p.kiekis++;
+        p.kaina+=preke.kaina
         exist = true;
       }
     }
@@ -69,7 +71,8 @@ export class PrekesComponent implements OnInit {
       this.cart.push({
         id: preke.id,
         pavadinimas: preke.pavadinimas,
-        kiekis: this.kiekisKrepselyje
+        kiekis: this.kiekisKrepselyje,
+        kaina:preke.kaina
       })
     }
 

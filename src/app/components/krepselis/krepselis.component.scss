@@ -1,9 +1,27 @@
  header {
+   display: flex;
+   justify-content: space-between;
    height: 50px;
    position: fixed;
    width: 100%;
    background-color: skyblue;
    z-index: 2;
+
+   h1 {
+     width: 0px;
+     white-space: nowrap;
+     overflow: hidden;
+     margin-top: 6px;
+     margin-left: 40%;
+     margin-bottom: 0px;
+     animation: hello 3s steps(70, end) infinite;
+   }
+
+   @keyframes hello {
+     to {
+       width: 100%
+     }
+   }
 
 
    button {
